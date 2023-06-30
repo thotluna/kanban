@@ -4,11 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - production
-      - staging
+      - master
   pull_request:
     branches:
-      - staging
+      - master
     types:
       - edited
       - opened
