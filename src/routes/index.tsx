@@ -1,25 +1,32 @@
-import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { component$, useSignal } from '@builder.io/qwik'
+import { type DocumentHead, Link } from '@builder.io/qwik-city'
 
 export default component$(() => {
+  const count = useSignal(0)
+
   return (
     <>
-      <h1>Hi 👋</h1>
-      <p>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </p>
+      <header>
+        <div>
+          <h2>Kanban Qwik</h2>
+        </div>
+        <nav>
+          <Link href='/auth/sign-in'>Sign In</Link>
+        </nav>
+      </header>
+      <main class='container mx-auto'>
+        <button onClick$={() => count.value++}>click: {count.value}</button>
+      </main>
     </>
-  );
-});
+  )
+})
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: 'Welcome to Qwik',
   meta: [
     {
-      name: "description",
-      content: "Qwik site description",
+      name: 'description',
+      content: 'Qwik site description',
     },
   ],
-};
+}
