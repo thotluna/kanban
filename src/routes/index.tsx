@@ -1,19 +1,16 @@
 import { component$, useSignal } from '@builder.io/qwik'
 import { type DocumentHead, Link } from '@builder.io/qwik-city'
+import { Navbar } from '~/shared/components/navbar'
 
 export default component$(() => {
   const count = useSignal(0)
 
   return (
     <>
-      <header>
-        <div>
-          <h2>Kanban Qwik</h2>
-        </div>
-        <nav>
-          <Link href='/auth/sign-in'>Sign In</Link>
-        </nav>
-      </header>
+      <Navbar>
+        <Link href='#'> Sign In</Link>
+        <Link href='#'> Sign Up</Link>
+      </Navbar>
       <main class='container mx-auto'>
         <button onClick$={() => count.value++}>click: {count.value}</button>
       </main>
