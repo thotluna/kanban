@@ -1,12 +1,7 @@
 import { $, component$, useSignal } from '@builder.io/qwik'
-import type { AuthActionButton } from '~/auth'
+import type { AuthState } from '~/auth'
 import { AUTH_ACTIONS } from '~/auth'
 import { ButtonGroup, FormSignUp, Header } from '~/auth/components'
-
-export type AuthState = {
-  isLoading: boolean
-  action: AuthActionButton
-}
 
 export default component$(() => {
   const state = useSignal<AuthState>({

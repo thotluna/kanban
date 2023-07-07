@@ -10,3 +10,14 @@ export interface AuthButtonStateType {
   isLoading: boolean
   action: AuthActionButton
 }
+
+export interface FormAuthProps {
+  actionButton: AuthActionButton
+  onEmail: (email: string) => void
+  isLoading: boolean
+}
+
+export type AuthState = {
+  isLoading: boolean
+  action: AuthActionButton
+}

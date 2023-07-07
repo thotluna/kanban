@@ -1,30 +1,25 @@
 import { component$ } from '@builder.io/qwik'
 import { Form, globalAction$, z, zod$ } from '@builder.io/qwik-city'
-import { AUTH_ACTIONS } from '~/auth'
 import type { FormAuthProps } from '~/auth'
-import { Button, BUTTON_TYPE, Spinner } from '~/shared'
-import { Checkbox, Field } from '~/shared'
+import { AUTH_ACTIONS } from '~/auth'
+import { Button, BUTTON_TYPE, Field, Spinner } from '~/shared'
 
-export const useFormData = globalAction$(
+export const useFormSignInData = globalAction$(
   (data) => {
     const email = data.email
-    const terms = data.terms
 
     return {
       email,
-      terms,
     }
   },
   zod$({
     email: z.string().nonempty().email(),
-    terms: z.string().regex(/true/),
   })
 )
 
-export const FormSignUp = component$<FormAuthProps>(
-  ({ actionButton, onEmail, isLoading = false }) => {
-    const action = useFormData()
-
+export const FormSingIn = component$<FormAuthProps>(
+  ({ actionButton, onEmail, isLoading }) => {
+    const action = useFormSignInData()
     return (
       <Form
         class='flex flex-col gap-4'
@@ -47,16 +42,6 @@ export const FormSignUp = component$<FormAuthProps>(
           errors={action.value?.fieldErrors?.email}
         />
 
-        <Checkbox
-          name='terms'
-          label='Agree to terms and conditions'
-          hasError={
-            action.value?.failed &&
-            action.value.fieldErrors?.terms &&
-            action.value.fieldErrors.terms.length > 0
-          }
-          errors={action.value?.fieldErrors?.terms}
-        />
         <Button type={BUTTON_TYPE.BUTTON} disabled={isLoading}>
           <div class='flex items-center justify-center gap-2'>
             {isLoading && actionButton === AUTH_ACTIONS.EMAIL && <Spinner />}
