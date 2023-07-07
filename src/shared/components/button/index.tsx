@@ -2,12 +2,13 @@ import { component$, Slot } from '@builder.io/qwik'
 import { Link } from '@builder.io/qwik-city'
 
 export enum BUTTON_TYPE {
+  SUBMIT = 'submit',
   BUTTON = 'button',
   LINK = 'link',
 }
 
 export interface ButtonProps {
-  type: string
+  type?: string
   id?: string
   classText?: string | undefined
   disabled?: boolean
@@ -19,16 +20,16 @@ export interface ButtonProps {
 
 export const Button = component$<ButtonProps>(
   ({
-    type,
     id,
     classText,
+    type = BUTTON_TYPE.BUTTON,
     disabled = false,
     accent = false,
     href,
     onClick,
   }) => {
     const basicStyle =
-      'border-emerald-400 text-emerald-400 hover:border-emerald-300 hover:text-slate-700 hover:bg-emerald-500   '
+      'border-emerald-700 text-emerald-400 hover:border-emerald-300 hover:text-slate-700 hover:bg-emerald-500   '
     const accentStyle =
       'border-emerald-500 bg-emerald-500 text-slate-700 hover:bg-emerald-400 hover:border-emerald-400'
     const disabledStyle =
