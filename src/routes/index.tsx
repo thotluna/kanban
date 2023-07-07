@@ -8,8 +8,8 @@ export default component$(() => {
   return (
     <>
       <Navbar>
-        <Link href='#'> Sign In</Link>
-        <Link href='#'> Sign Up</Link>
+        <Link href='/auth/sign-in'> Sign In</Link>
+        <Link href='/auth/sign-up'> Sign Up</Link>
       </Navbar>
       <main class='container mx-auto'>
         <button onClick$={() => count.value++}>click: {count.value}</button>
