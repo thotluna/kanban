@@ -1,5 +1,10 @@
 import { component$, Slot } from '@builder.io/qwik'
+import { AuthButtonProvider } from '~/auth'
 
 export default component$(() => {
-  return <Slot />
+  return (
+    <AuthButtonProvider>
+      <Slot />
+    </AuthButtonProvider>
+  )
 })

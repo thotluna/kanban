@@ -1,32 +1,29 @@
-import { $, component$, useSignal } from '@builder.io/qwik'
-import { AUTH_ACTIONS, ButtonGroup, FormSingIn, Header } from '~/auth'
-import type { AuthState } from '~/auth'
+import { $, component$ } from '@builder.io/qwik'
+import {
+  AUTH_ACTIONS,
+  ButtonGroup,
+  FormSingIn,
+  Header,
+  useAuthButtonState,
+} from '~/auth'
 
 export default component$(() => {
-  const state = useSignal<AuthState>({
-    isLoading: false,
-    action: undefined,
-  })
+  const state = useAuthButtonState()
 
   const handlerOnEmail = $((email: string) => {
-    state.value = {
-      action: AUTH_ACTIONS.EMAIL,
-      isLoading: true,
-    }
+    state.action = AUTH_ACTIONS.EMAIL
+    state.isLoading = true
+
     console.log(email)
   })
 
   const onGithub = $(() => {
-    state.value = {
-      isLoading: true,
-      action: AUTH_ACTIONS.GITHUB,
-    }
+    state.action = AUTH_ACTIONS.GITHUB
+    state.isLoading = true
   })
   const onGoogle = $(() => {
-    state.value = {
-      isLoading: true,
-      action: AUTH_ACTIONS.GOOGLE,
-    }
+    state.action = AUTH_ACTIONS.GOOGLE
+    state.isLoading = true
   })
   return (
     <section class='w-full h-full flex items-center justify-center'>
@@ -38,10 +35,10 @@ export default component$(() => {
         />
 
         <ButtonGroup
-          action={state.value.action}
+          action={state.action}
           onAuthGithub={onGithub}
           onAuthGoogle={onGoogle}
-          isLoading={state.value.isLoading}
+          isLoading={state.isLoading}
         />
 
         <div class='w-full relative  flex justify-center items-center before:absolute before:w-full before:h-[1px] before:bg-slate-400 before:bottom-[44%] before:left-0 before:right-0 '>
@@ -50,9 +47,9 @@ export default component$(() => {
           </span>
         </div>
         <FormSingIn
-          actionButton={state.value.action}
+          actionButton={state.action}
           onEmail={handlerOnEmail}
-          isLoading={state.value.isLoading}
+          isLoading={state.isLoading}
         />
       </article>
     </section>

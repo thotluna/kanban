@@ -1,3 +1,4 @@
+export * from './auth-button-context-provider'
 export * from './btn-group'
 export * from './form-sign-in'
 export * from './form-sign-up'

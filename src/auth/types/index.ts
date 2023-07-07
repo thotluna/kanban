@@ -17,7 +17,7 @@ export interface FormAuthProps {
   isLoading: boolean
 }
 
-export type AuthState = {
+export type AuthButtonState = {
   isLoading: boolean
   action: AuthActionButton
 }
