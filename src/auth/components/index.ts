@@ -1,3 +1,3 @@
-export * from './authentication-panel'
-export * from './button-group'
-export * from './form-auth'
+export * from './btn-group'
+export * from './form-sign-up'
+export * from './header'
