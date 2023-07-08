@@ -42,3 +42,7 @@ lerna-debug.log*
 
 # Cloudflare
 functions/**/*.js
+
+#cypress
+/cypress/screenshots
+/cypress/videos
