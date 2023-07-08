@@ -13,7 +13,10 @@ export interface ButtonGroupProps {
 export const ButtonGroup = component$<ButtonGroupProps>(
   ({ action, onAuthGithub, onAuthGoogle, isLoading = false }) => {
     return (
-      <div class='w-full flex items-center justify-between gap-1'>
+      <div
+        data-test-id='btn-group'
+        class='w-full flex items-center justify-between gap-1'
+      >
         <Button onClick={onAuthGithub} disabled={isLoading}>
           <div class='flex items-center gap-2'>
             {isLoading && action === AUTH_ACTIONS.GITHUB && <Spinner />}
