@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@builder.io/qwik': ^1.2.3
   '@builder.io/qwik-city': ^1.2.3
+  '@playwright/test': ^1.35.1
   '@supabase/supabase-js': 2.26.0
   '@types/eslint': 8.40.2
   '@types/node': ^20.3.2
@@ -28,6 +29,7 @@ dependencies:
 devDependencies:
   '@builder.io/qwik': 1.2.3_undici@5.22.1
   '@builder.io/qwik-city': 1.2.3
+  '@playwright/test': 1.35.1
   '@types/eslint': 8.40.2
   '@types/node': 20.3.2
   '@typescript-eslint/eslint-plugin': 5.60.1_nxpvb2fnld4vk2v7o3443dfbne
@@ -728,6 +730,17 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+    dev: true
+
+  /@playwright/test/1.35.1:
+    resolution: {integrity: sha512-b5YoFe6J9exsMYg0pQAobNDR85T1nLumUYgUTtKm4d21iX2L7WqKq9dW8NGJ+2vX0etZd+Y7UeuqsxDXm9+5ZA==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dependencies:
+      '@types/node': 20.3.2
+      playwright-core: 1.35.1
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /@rollup/pluginutils/5.0.2:
@@ -3814,6 +3827,12 @@ packages:
   /pirates/4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
+    dev: true
+
+  /playwright-core/1.35.1:
+    resolution: {integrity: sha512-pNXb6CQ7OqmGDRspEjlxE49w+4YtR6a3X6mT1hZXeJHWmsEz7SunmvZeiG/+y1yyMZdHnnn73WKYdtV1er0Xyg==}
+    engines: {node: '>=16'}
+    hasBin: true
     dev: true
 
   /postcss-import/15.1.0_postcss@8.4.24:
