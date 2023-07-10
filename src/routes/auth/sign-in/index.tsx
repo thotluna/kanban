@@ -1,4 +1,5 @@
 import { $, component$ } from '@builder.io/qwik'
+import type { DocumentHead } from '@builder.io/qwik-city'
 import {
   AUTH_ACTIONS,
   ButtonGroup,
@@ -55,3 +56,13 @@ export default component$(() => {
     </section>
   )
 })
+
+export const head: DocumentHead = {
+  title: 'Sign In',
+  meta: [
+    {
+      name: 'description',
+      content: 'Sign In to Kanban',
+    },
+  ],
+}

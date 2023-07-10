@@ -9,7 +9,7 @@ export const ErrorsField = component$<ErrorsFieldProps>(({ hasError }) => {
     <>
       {hasError && (
         <div class='w-full flex flex-col items-end'>
-          <span class='text-red-400 text-xs'>
+          <span data-test='error' class='text-red-400 text-xs'>
             <Slot />
           </span>
         </div>

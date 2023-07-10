@@ -23,6 +23,7 @@ export const FormSingIn = component$<FormAuthProps>(
     return (
       <Form
         class='flex flex-col gap-4'
+        data-test='sign-in'
         action={action}
         onSubmitCompleted$={() => {
           if (action.value?.email) {
@@ -45,7 +46,7 @@ export const FormSingIn = component$<FormAuthProps>(
         <Button type={BUTTON_TYPE.BUTTON} disabled={isLoading}>
           <div class='flex items-center justify-center gap-2'>
             {isLoading && actionButton === AUTH_ACTIONS.EMAIL && <Spinner />}
-            Sign Up
+            Sign In
           </div>
         </Button>
       </Form>
