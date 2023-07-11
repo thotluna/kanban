@@ -14,7 +14,7 @@ export const Header = component$<HeaderProps>(
         <div class='w-16 h-16 rounded-full border-4 border-emerald-400 flex items-center justify-center'>
           <Logo size={64} />
         </div>
-        <h1 class='text-4xl'>{title}</h1>
+        <h1 class='text-4xl'>{title} </h1>
         <span class='text-sm text-emerald-200'>
           Or <a href={link}>{linkComment}</a>
         </span>
