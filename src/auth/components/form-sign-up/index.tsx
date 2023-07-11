@@ -28,6 +28,7 @@ export const FormSignUp = component$<FormAuthProps>(
     return (
       <Form
         class='flex flex-col gap-4'
+        data-test='sign-up'
         action={action}
         onSubmitCompleted$={() => {
           if (action.value?.email) {
