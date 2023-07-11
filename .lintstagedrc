@@ -1,4 +1,4 @@
 {
-  "src/**/*.{js,ts,jsx,tsx}": ["eslint --fix"],
-  "*.json": ["prettier --write"]
+  "src/**/*.{js,ts,jsx,tsx}": ["pnpm run lint", "pnpm run fmt", "git add"],
+  "*.json": ["pnpm run fmt.check", "git add"]
 }
