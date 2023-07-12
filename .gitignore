@@ -7,7 +7,6 @@
 # Development
 node_modules
 *.local
-.env.production
 
 # Cache
 .cache
@@ -52,3 +51,4 @@ functions/**/*.js
 /playwright-report
 /test-results
 
+.env.production
