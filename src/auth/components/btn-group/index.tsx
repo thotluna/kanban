@@ -15,7 +15,7 @@ export const ButtonGroup = component$<ButtonGroupProps>(
     return (
       <div
         data-test-id='btn-group'
-        class='w-full flex items-center justify-center gap-1'
+        class='w-full flex items-center justify-between gap-1'
       >
         <Button onClick={onAuthGithub} disabled={isLoading}>
           <div class='flex items-center gap-2'>
