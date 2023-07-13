@@ -4,7 +4,7 @@ export const Navbar = component$(() => {
   const isOpen = useSignal(false)
 
   return (
-    <header class='relative w-full py-2 px-8 flex flex-col items-center bg-slate-700 lg:flex-row lg:min-w-max lg:justify-between'>
+    <header class='relative w-full py-2 px-8  mb-2 flex flex-col items-center bg-slate-700 lg:flex-row lg:min-w-max lg:justify-between'>
       <div class='w-full flex items-center justify-between lg:w-auto'>
         <h2 class='text-2xl font-semibold lg:text-3xl'>Kanban-Qwik</h2>
         <button

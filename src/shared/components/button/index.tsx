@@ -41,7 +41,7 @@ export const Button = component$<ButtonProps>(
           <button
             id={id}
             class={[
-              'px-8 py-2 font-semibold border-2 rounded-md transition-colors duration-150 disabled:border-slate-500 disabled:bg-transparent disabled:text-slate-400 disabled:cursor-not-allowed flex items-center justify-center gap-1',
+              'px-4 sm:px-8 py-2 font-semibold border-2 rounded-md transition-colors duration-150 disabled:border-slate-500 disabled:bg-transparent disabled:text-slate-400 disabled:cursor-not-allowed flex items-center justify-center gap-1',
               accent ? accentStyle : basicStyle,
               classText,
             ]}
@@ -55,7 +55,7 @@ export const Button = component$<ButtonProps>(
           <Link
             id={id}
             class={[
-              'px-8 py-2 font-semibold border-2 rounded-md transition-colors duration-150 flex items-center justify-center gap-1',
+              'px-4 sm:x-8 py-2 font-semibold border-2 rounded-md transition-colors duration-150 flex items-center justify-center gap-1',
               disabled ? disabledStyle : accent ? accentStyle : basicStyle,
               classText,
             ]}
