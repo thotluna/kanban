@@ -1,5 +1,6 @@
 import { component$, Slot } from '@builder.io/qwik'
 import { Link, RequestHandler } from '@builder.io/qwik-city'
+import { Message } from '~/messages'
 import { Navbar } from '~/shared'
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
@@ -15,7 +16,7 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 
 export default component$(() => {
   return (
-    <main class='h-full flex flex-col'>
+    <main class='relative h-full flex flex-col'>
       <Navbar>
         <Link href='/auth/sign-in'> Sign In</Link>
         <Link href='/auth/sign-up'> Sign Up</Link>
@@ -23,6 +24,7 @@ export default component$(() => {
       <section class='flex-1 flex items-center justify-center'>
         <Slot />
       </section>
+      <Message />
     </main>
   )
 })
