@@ -59,7 +59,7 @@ export const Navbar = component$(() => {
           `absolute w-full  z-10 bg-slate-700  flex flex-col items-center transition-all duration-1000 [&>*]:p-2 ${
             isOpen.value ? 'top-[100%]' : 'top-[-200%]'
           } `,
-          'lg:relative lg:w-auto lg:flex-row lg:block',
+          'lg:relative lg:w-auto lg:flex-row lg:flex lg:top-0 ',
           { hidden: !isOpen.value },
         ]}
       >
