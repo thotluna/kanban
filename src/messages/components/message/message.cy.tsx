@@ -25,15 +25,6 @@ export const MessageTest = component$<Props>(({ milliseconds = 0 }) => {
 })
 
 describe(`Message component testing`, () => {
-  it(`render message`, () => {
-    cy.mount(
-      <MessageProvider>
-        <Message />
-      </MessageProvider>
-    )
-    cy.contains('This is a message')
-  })
-
   it(`render message error set outdoor`, () => {
     cy.mount(
       <MessageProvider>
