@@ -17,7 +17,11 @@ export const ButtonGroup = component$<ButtonGroupProps>(
         data-test-id='btn-group'
         class='w-full flex items-center justify-between gap-1'
       >
-        <Button onClick={onAuthGithub} disabled={isLoading}>
+        <Button
+          classText='w-full px-0'
+          onClick={onAuthGithub}
+          disabled={isLoading}
+        >
           <div class='flex items-center gap-2'>
             {isLoading && action === AUTH_ACTIONS.GITHUB && <Spinner />}
             {isLoading && action !== AUTH_ACTIONS.GITHUB && <GithubIcon />}
@@ -25,7 +29,11 @@ export const ButtonGroup = component$<ButtonGroupProps>(
             Github
           </div>
         </Button>
-        <Button onClick={onAuthGoogle} disabled={isLoading}>
+        <Button
+          classText='w-full px-0'
+          onClick={onAuthGoogle}
+          disabled={isLoading}
+        >
           <div class='flex items-center gap-2'>
             {isLoading && action === AUTH_ACTIONS.GOOGLE && <Spinner />}
             {isLoading && action !== AUTH_ACTIONS.GOOGLE && (
