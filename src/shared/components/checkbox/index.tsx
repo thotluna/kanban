@@ -19,7 +19,7 @@ export const Checkbox = component$<CheckboxProps>(
             title={name}
             type='checkbox'
             class={[
-              'inline-block peer relative appearance-none w-5 h-5 border-2 border-emerald-600 rounded-md transition-transform duration-200 rotate-0 scale-100',
+              'inline-block peer relative appearance-none w-5 h-5 border-2 border-emerald-600 rounded-md bg-slate-800 transition-transform duration-200 rotate-0 scale-100',
               'focus:before:absolute focus:before:-top-3 focus:before:-left-3  focus:before:w-10 focus:before:h-10 focus:before:bg-emerald-400 focus:before:opacity-30 focus:before:rounded-full',
               'hover:scale-125',
               'hover:before:absolute hover:before:-top-3 hover:before:-left-3  hover:before:w-10 hover:before:h-10 hover:before:bg-emerald-400 hover:before:opacity-30 hover:before:rounded-full',

@@ -39,7 +39,7 @@ export const Field = component$<FieldProps>(
           type='text'
           placeholder={placeholder}
           class={[
-            'text-emerald-50 bg-transparent border-2 rounded-md px-4 py-1 placeholder:text-slate-500 focus-visible:outline-2 focus-visible:outline-emerald-400 focus-visible:outline focus-visible:border-0',
+            'text-emerald-50 bg-slate-800 border-2 rounded-md px-4 py-1 placeholder:text-slate-500 focus-visible:outline-2 focus-visible:outline-emerald-400 focus-visible:outline focus-visible:border-0',
             border,
           ]}
         />
