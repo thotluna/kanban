@@ -1,27 +1,73 @@
 import { $, component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
+import { useLocation } from '@builder.io/qwik-city'
 import {
   AUTH_ACTIONS,
   ButtonGroup,
   FormSingIn,
   Header,
   useAuthButtonState,
+  Card,
+  Auth,
 } from '~/auth'
-import { Card } from '~/auth/components/card'
+import { useMessage } from '~/messages'
 
 export default component$(() => {
   const state = useAuthButtonState()
+  const { createMessageError, createMessageSuccess } = useMessage()
+  const location = useLocation()
 
-  const handlerOnEmail = $((email: string) => {
+  const handlerOnEmail = $(async (email: string) => {
     state.action = AUTH_ACTIONS.EMAIL
     state.isLoading = true
 
-    console.log(email)
+    const { data, error } = await Auth.singInOpt({
+      email,
+      options: { emailRedirectTo: location.url.href },
+    })
+
+    if (error) {
+      createMessageError({
+        message: `${error.name} ${error.message} ${error.cause}`,
+        milisecons: 1200,
+      })
+    }
+
+    if (!error && data.user) {
+      createMessageSuccess({
+        message: 'Perfect! Now check your email to activate your account',
+      })
+    }
+
+    state.action = undefined
+    state.isLoading = false
   })
 
-  const onGithub = $(() => {
+  const onGithub = $(async () => {
     state.action = AUTH_ACTIONS.GITHUB
     state.isLoading = true
+
+    const { data, error } = await Auth.singInGithub({
+      options: { redirectTo: location.url.href },
+    })
+
+    console.log({ data, error })
+
+    if (error) {
+      createMessageError({
+        message: `${error.name} ${error.message} ${error.cause}`,
+        milisecons: 1200,
+      })
+    }
+
+    if (!error) {
+      createMessageSuccess({
+        message: 'Perfect! Now check your email to activate your account',
+      })
+    }
+
+    state.action = undefined
+    state.isLoading = false
   })
   const onGoogle = $(() => {
     state.action = AUTH_ACTIONS.GOOGLE

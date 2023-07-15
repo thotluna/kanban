@@ -1,5 +1,6 @@
 export * from './auth-button-context-provider'
 export * from './btn-group'
+export * from './card'
 export * from './form-sign-in'
 export * from './form-sign-up'
 export * from './header'
