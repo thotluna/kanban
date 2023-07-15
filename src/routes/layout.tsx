@@ -1,5 +1,6 @@
 import { component$, Slot } from '@builder.io/qwik'
-import { Link, RequestHandler } from '@builder.io/qwik-city'
+import type { RequestHandler } from '@builder.io/qwik-city'
+import { Link } from '@builder.io/qwik-city'
 import { Message, MessageProvider } from '~/messages'
 import { Navbar } from '~/shared'
 
