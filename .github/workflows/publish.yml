@@ -20,17 +20,17 @@ jobs:
       contents: read
       deployments: write
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
+      PUBLIC_SUPABASE_URL: ${{ env.PUBLIC_SUPABASE_URL }}
+      PUBLIC_SUPABASE_ANON_KEY: ${{ env.PUBLIC_SUPABASE_ANON_KEY }}
     strategy:
       fail-fast: true
       matrix:
         node-version: [18.x]
         pnpm-version: [7.x]
     timeout-minutes: 10
-    env:
-      NODE_ENV: production
-      PUBLIC_SUPABASE_URL: ${{env.PUBLIC_SUPABASE_URL}}
-      PUBLIC_SUPABASE_ANON_KEY: ${{env.PUBLIC_SUPABASE_ANON_KEY}}
-
+    
     steps:
       - uses: styfle/cancel-workflow-action@0.11.0
         with:
