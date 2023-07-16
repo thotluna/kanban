@@ -26,6 +26,10 @@ jobs:
         node-version: [18.x]
         pnpm-version: [7.x]
     timeout-minutes: 10
+    env:
+      NODE_ENV: production
+      PUBLIC_SUPABASE_URL: ${{PUBLIC_SUPABASE_URL}}
+      PUBLIC_SUPABASE_ANON_KEY: ${{PUBLIC_SUPABASE_ANON_KEY}}
 
     steps:
       - uses: styfle/cancel-workflow-action@0.11.0
@@ -46,12 +50,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - run: pnpm install --frozen-lockfile
+      - run: echo "url $PUBLIC_SUPABASE_URL , key $PUBLIC_SUPABASE_ANOM_KEY"
       - run: pnpm run build
-        env:
-          NODE_ENV: production
-          PUBLIC_SUPABASE_URL: ${{PUBLIC_SUPABASE_URL}}
-          PUBLIC_SUPABASE_ANON_KEY: ${{PUBLIC_SUPABASE_ANON_KEY}}
-        run: echo "url $PUBLIC_SUPABASE_URL , key $PUBLIC_SUPABASE_ANOM_KEY"
 
       - uses: cloudflare/pages-action@v1.5.0
         with:
