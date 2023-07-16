@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { toUser } from '~/user/mapper'
 import type {
   CredentialSignUpWithOpt,
   CredentialsOAuth,
@@ -28,4 +29,16 @@ export const AuthSupabase = {
   singOut: () => {
     return supabase.auth.signOut()
   },
+}
+
+export const getUser = async () => {
+  const { data, error } = await supabase.auth.getUser()
+
+  if (data.user) {
+    const user = toUser(data.user)
+    return { user, error }
+  } else {
+    const user = null
+    return { user, error }
+  }
 }

@@ -1,6 +1,10 @@
 import { component$, Slot, useSignal } from '@builder.io/qwik'
 
-export const Navbar = component$(() => {
+type NavbarProps = {
+  avatarUrl?: string
+}
+
+export const Navbar = component$<NavbarProps>(({ avatarUrl }) => {
   const isOpen = useSignal(false)
 
   return (
@@ -65,6 +69,11 @@ export const Navbar = component$(() => {
       >
         <Slot />
       </nav>
+      {avatarUrl && (
+        <picture class='w-6 h-6 rounded-full overflow-hidden'>
+          <img class='w-6 h-6' width={24} height={24} src={avatarUrl}></img>
+        </picture>
+      )}
     </header>
   )
 })

@@ -29,6 +29,8 @@ export default component$(() => {
       options: { emailRedirectTo: location.url.href },
     })
 
+    console.log({ data, error })
+
     if (error) {
       createMessageError({
         message: `${error.name} ${error.message} ${error.cause}`,

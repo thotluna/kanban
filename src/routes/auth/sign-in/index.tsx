@@ -1,6 +1,6 @@
-import { $, component$ } from '@builder.io/qwik'
+import { $, component$, useVisibleTask$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { useLocation } from '@builder.io/qwik-city'
+import { useNavigate, useLocation } from '@builder.io/qwik-city'
 import {
   AUTH_ACTIONS,
   ButtonGroup,
@@ -11,17 +11,31 @@ import {
   Auth,
 } from '~/auth'
 import { useMessage } from '~/messages'
+import { getUser } from '~/shared'
+import { useUser } from '~/user'
 
 export default component$(() => {
   const state = useAuthButtonState()
   const { createMessageError, createMessageSuccess } = useMessage()
   const location = useLocation()
+  const nav = useNavigate()
+  const { set } = useUser()
+
+  useVisibleTask$(async () => {
+    const { user, error } = await getUser()
+
+    if (user && !error) {
+      console.log(user)
+      set(user)
+      nav('/dashboard')
+    }
+  })
 
   const handlerOnEmail = $(async (email: string) => {
     state.action = AUTH_ACTIONS.EMAIL
     state.isLoading = true
 
-    const { data, error } = await Auth.singInOpt({
+    const { error } = await Auth.singInOpt({
       email,
       options: { emailRedirectTo: location.url.href },
     })
@@ -31,43 +45,31 @@ export default component$(() => {
         message: `${error.name} ${error.message} ${error.cause}`,
         milisecons: 1200,
       })
-    }
-
-    if (!error && data.user) {
+      state.action = undefined
+      state.isLoading = false
+    } else {
       createMessageSuccess({
-        message: 'Perfect! Now check your email to activate your account',
+        message: 'Perfect! Now check your email',
       })
     }
-
-    state.action = undefined
-    state.isLoading = false
   })
 
   const onGithub = $(async () => {
     state.action = AUTH_ACTIONS.GITHUB
     state.isLoading = true
 
-    const { data, error } = await Auth.singInGithub({
+    const { error } = await Auth.singInGithub({
       options: { redirectTo: location.url.href },
     })
-
-    console.log({ data, error })
 
     if (error) {
       createMessageError({
         message: `${error.name} ${error.message} ${error.cause}`,
         milisecons: 1200,
       })
+      state.action = undefined
+      state.isLoading = false
     }
-
-    if (!error) {
-      createMessageSuccess({
-        message: 'Perfect! Now check your email to activate your account',
-      })
-    }
-
-    state.action = undefined
-    state.isLoading = false
   })
   const onGoogle = $(() => {
     state.action = AUTH_ACTIONS.GOOGLE

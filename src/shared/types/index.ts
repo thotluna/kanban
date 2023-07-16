@@ -14,3 +14,12 @@ export type CredentialsOAuth = {
     redirectTo: string
   }
 }
+
+export interface User {
+  id: string
+  email?: string
+  role?: string
+  avatarUrl?: string
+  name?: string
+  alias?: string
+}
