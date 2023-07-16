@@ -14,7 +14,6 @@ on:
       - synchronize
 
 env:
-  NODE_ENV: production
   PUBLIC_SUPABASE_URL: ${{ secrets.PUBLIC_SUPABASE_URL }}
   PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.PUBLIC_SUPABASE_ANON_KEY }}
 
@@ -53,6 +52,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: echo "url $PUBLIC_SUPABASE_URL , key $PUBLIC_SUPABASE_ANOM_KEY"
       - run: pnpm run build
+        env:
+          NODE_ENV: production
 
       - uses: cloudflare/pages-action@v1.5.0
         with:
