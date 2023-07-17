@@ -30,7 +30,12 @@ export const Message = component$(() => {
           data-test-id='message-component'
           class='w-full fixed bottom-2 left-0 right-0 flex justify-center'
         >
-          <span class={['relative ps-4 pe-7 py-3 rounded-md', color.value]}>
+          <span
+            class={[
+              'relative ps-4 pe-7 py-3 rounded-md w-3/4 md:w-1/2',
+              color.value,
+            ]}
+          >
             <button
               onClick$={clear}
               class='absolute top-1 right-1 hover:text-emerald-50'
