@@ -14,14 +14,14 @@ export const Navbar = component$<NavbarProps>(({ avatarUrl }) => {
   return (
     <header class='relative w-full py-2 px-4 md:px-8 flex items-center justify-between bg-slate-700 lg:flex-row lg:min-w-max lg:justify-between'>
       <h2 class='text-2xl font-semibold lg:text-3xl'>Kanban-Qwik</h2>
-      <div class=' flex items-center justify-between lg:w-auto'>
+      <div class=' flex items-center justify-between gap-3 lg:w-auto'>
         <nav
           onClick$={handlerOnClick}
           class={[
             `absolute  w-full left-0 z-10 bg-slate-700  flex flex-col items-center transition-all duration-1000 [&>*]:p-2 ${
               isOpen.value ? 'top-[100%]' : 'top-[-200%]'
             } `,
-            'lg:relative lg:w-auto lg:flex-row lg:flex lg:top-0 ',
+            'lg:relative lg:w-auto lg:flex-row lg:gap-3 lg:flex lg:top-0 ',
             { hidden: !isOpen.value },
           ]}
         >

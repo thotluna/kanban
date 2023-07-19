@@ -12,11 +12,11 @@ export default component$(() => {
 })
 
 export const head: DocumentHead = {
-  title: 'Welcome to Qwik',
+  title: 'Welcome to Kanban Qwik',
   meta: [
     {
       name: 'description',
-      content: 'Qwik site description',
+      content: 'This is a kanban app',
     },
   ],
 }
