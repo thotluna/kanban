@@ -29,16 +29,14 @@ export const AuthSupabase = {
   singOut: () => {
     return supabase.auth.signOut()
   },
-}
-
-export const getUser = async () => {
-  const { data, error } = await supabase.auth.getUser()
-
-  if (data.user) {
-    const user = toUser(data.user)
-    return { user, error }
-  } else {
-    const user = null
-    return { user, error }
-  }
+  getUser: async () => {
+    const { data, error } = await supabase.auth.getUser()
+    if (data.user) {
+      const user = toUser(data.user)
+      return { user, error }
+    } else {
+      const user = null
+      return { user, error }
+    }
+  },
 }

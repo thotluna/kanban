@@ -11,7 +11,6 @@ import {
   Auth,
 } from '~/auth'
 import { useMessage } from '~/messages'
-import { getUser } from '~/shared'
 import { useUser } from '~/user'
 
 export default component$(() => {
@@ -19,10 +18,15 @@ export default component$(() => {
   const { createMessageError, createMessageSuccess } = useMessage()
   const location = useLocation()
   const nav = useNavigate()
-  const { set } = useUser()
+  const {
+    data: { isLoagged },
+    set,
+  } = useUser()
 
-  useVisibleTask$(async () => {
-    const { user, error } = await getUser()
+  useVisibleTask$(async ({ track }) => {
+    track(() => isLoagged)
+    if (!isLoagged) return
+    const { user, error } = await Auth.getUser()
 
     if (user && !error) {
       console.log(user)

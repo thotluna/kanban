@@ -21,4 +21,9 @@ export const Auth = {
   singOut: () => {
     return AuthSupabase.singOut()
   },
+  getUser: async () => {
+    const { user, error } = await AuthSupabase.getUser()
+
+    return { user, error }
+  },
 }
