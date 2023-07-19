@@ -75,9 +75,22 @@ export default component$(() => {
       state.isLoading = false
     }
   })
-  const onGoogle = $(() => {
+  const onGoogle = $(async () => {
     state.action = AUTH_ACTIONS.GOOGLE
     state.isLoading = true
+
+    const { error } = await Auth.singInGoogle({
+      options: { redirectTo: location.url.href },
+    })
+
+    if (error) {
+      createMessageError({
+        message: `${error.name} ${error.message} ${error.cause}`,
+        milisecons: 1200,
+      })
+      state.action = undefined
+      state.isLoading = false
+    }
   })
   return (
     <Card>
