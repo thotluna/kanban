@@ -2,7 +2,6 @@ import { $, component$, Slot, useVisibleTask$ } from '@builder.io/qwik'
 import type { RequestHandler } from '@builder.io/qwik-city'
 import { useNavigate } from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
-import { AuthChangeEvent } from '@supabase/supabase-js'
 import { Auth } from '~/auth'
 import { Message, MessageProvider } from '~/messages'
 import { Navbar, supabase } from '~/shared'
@@ -29,7 +28,7 @@ export default component$(() => {
   } = useUser()
   useVisibleTask$(({ cleanup }) => {
     const { data: authListener } = supabase.auth.onAuthStateChange(
-      async (event: AuthChangeEvent, session: any) => {
+      async (event: string, session: any) => {
         console.log({ event })
 
         if (event === 'SIGNED_IN') {
