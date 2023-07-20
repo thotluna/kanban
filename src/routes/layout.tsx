@@ -86,7 +86,7 @@ export default component$(() => {
             <>
               <Link href='/'>Home</Link>
               <Link href='/dashboard'>Dasboard</Link>
-              <button onClick$={handlerSignOut}>Sing Out</button>
+              <button onClick$={handlerSignOut}>Sign Out</button>
             </>
           )}
         </Navbar>

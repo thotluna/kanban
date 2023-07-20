@@ -1,9 +1,10 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
+import dotenv from 'dotenv'
+// dotenv.config()
+dotenv.config({ path: '.env.local', override: true })
+const backendEnv = { ...process.env } as { [key: string]: string }
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 const config: PlaywrightTestConfig = {
   testDir: './',
   testMatch: '**/*.spec.ts',
@@ -35,6 +36,7 @@ const config: PlaywrightTestConfig = {
   webServer: {
     command: 'npm run preview',
     port: 4173,
+    env: backendEnv,
   },
 }
 

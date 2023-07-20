@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { appNavigationClick } from '../../../shared/utils'
+import dotenv from 'dotenv'
+dotenv.config()
 
 test.describe(`Testing Sing In route`, async () => {
   test('Should be render the header Sign In form', async ({ page }) => {
@@ -110,5 +112,31 @@ test.describe(`Testing Sing In route`, async () => {
     expect(invalidSubmit.method).toBe('POST')
     const notError = signInForm.locator('[data-test="error"]')
     await expect(notError).not.toBeVisible()
+  })
+
+  test('Should be sign in and sign out whit Github', async ({ page }) => {
+    const user = process.env.PRIVATE_USER
+    const pass = process.env.PRIVATE_PASSWORD
+    await page.goto('/')
+    await page.getByRole('link', { name: 'Sign In' }).click()
+    await page.getByRole('button', { name: 'Github' }).click()
+    await page.getByLabel('Username or email address').click()
+    await page.getByLabel('Username or email address').fill(`${user}`)
+    await page.getByLabel('Password').click()
+    await page.getByLabel('Password').fill(`${pass}`)
+    await page.getByRole('button', { name: 'Sign in' }).click()
+    page.getByRole('link', { name: 'Dasboard' })
+    page.getByRole('link', { name: 'Home' })
+    page.getByText('Dashboard')
+    page.getByRole('img')
+    await page.getByRole('button', { name: 'Sign Out' }).click()
+    await expect(page).toHaveURL('/auth/sign-in/')
+  })
+
+  test('Should be initial sign in with google', async ({ page }) => {
+    await page.goto('http://localhost:5173/')
+    await page.getByRole('link', { name: 'Sign In' }).click()
+    await page.getByRole('button', { name: 'Google' }).click()
+    await page.getByText('Sign in with Google')
   })
 })
