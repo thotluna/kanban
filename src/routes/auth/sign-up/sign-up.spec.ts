@@ -126,7 +126,7 @@ test.describe(`Testing Sing Up route`, async () => {
     await expect(error).toContainText('Required')
   })
 
-  test(`should be send form sign in`, async ({ page }) => {
+  test(`should be send form sign up`, async ({ page }) => {
     await page.goto('/auth/sign-up')
     const signUpForm = page.locator(`form[data-test="sign-up"]`)
     const inputEmail = signUpForm.locator('input[type="text"]')
