@@ -1,6 +1,6 @@
-import { $, component$, useVisibleTask$ } from '@builder.io/qwik'
+import { $, component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { useNavigate, useLocation } from '@builder.io/qwik-city'
+import { useLocation } from '@builder.io/qwik-city'
 import {
   AUTH_ACTIONS,
   ButtonGroup,
@@ -11,29 +11,11 @@ import {
   Auth,
 } from '~/auth'
 import { useMessage } from '~/messages'
-import { useUser } from '~/user'
 
 export default component$(() => {
   const state = useAuthButtonState()
   const { createMessageError, createMessageSuccess } = useMessage()
   const location = useLocation()
-  const nav = useNavigate()
-  const {
-    data: { isLoagged },
-    set,
-  } = useUser()
-
-  useVisibleTask$(async ({ track }) => {
-    track(() => isLoagged)
-    if (!isLoagged) return
-    const { user, error } = await Auth.getUser()
-
-    if (user && !error) {
-      console.log(user)
-      set(user)
-      nav('/dashboard')
-    }
-  })
 
   const handlerOnEmail = $(async (email: string) => {
     state.action = AUTH_ACTIONS.EMAIL

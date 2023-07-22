@@ -4,7 +4,7 @@ import { useNavigate } from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
 import { Auth } from '~/auth'
 import { Message, MessageProvider } from '~/messages'
-import { Navbar, supabase } from '~/shared'
+import { getName, Navbar, supabase } from '~/shared'
 import { useUser } from '~/user'
 import { toUser } from '~/user/mapper'
 
@@ -21,11 +21,23 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 }
 
 export default component$(() => {
-  const navigator = useNavigate()
+  const navigate = useNavigate()
   const {
-    data: { user },
+    data: { user, isLoagged },
     set,
   } = useUser()
+  useVisibleTask$(async ({ track }) => {
+    track(() => isLoagged)
+    // if (!isLoagged) return
+    const { user, error } = await Auth.getUser()
+
+    if (user && !error) {
+      console.log(user)
+      set(user)
+      const username = getName(user.email!)
+      navigate(`/${username}/`)
+    }
+  })
   useVisibleTask$(({ cleanup }) => {
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event: string, session: any) => {
@@ -50,7 +62,9 @@ export default component$(() => {
             body: JSON.stringify(body),
           })
 
-          navigator('/dashboard')
+          const username = getName(newUser.email!)
+
+          navigate(`/${username}`)
         }
         if (event === 'SIGNED_OUT') {
           set()
@@ -60,7 +74,7 @@ export default component$(() => {
               'Content-Type': 'application/json',
             },
           })
-          navigator('/auth/sign-in')
+          navigate('/auth/sign-in')
         }
       }
     )
