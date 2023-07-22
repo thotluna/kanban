@@ -1,3 +1,4 @@
+import type { SupabaseClient } from '@supabase/supabase-js'
 import { createClient } from '@supabase/supabase-js'
 import { toUser } from '~/user/mapper'
 import type {
@@ -39,4 +40,63 @@ export const AuthSupabase = {
       return { user, error }
     }
   },
+}
+
+export const supabaseFromServer = (privateKey: string) =>
+  createClient(PUBLIC_SUPABASE_URL, privateKey)
+
+export type Profile = {
+  id?: string
+  email?: string
+  role?: string
+}
+
+export class ServerAuth {
+  privateKey: string
+  supabase: SupabaseClient<any, 'public', any>
+  constructor(privateKey: string) {
+    this.privateKey = privateKey
+    this.supabase = createClient(PUBLIC_SUPABASE_URL, privateKey)
+  }
+
+  async getUser(privateTokenUser: string) {
+    try {
+      const result = await supabase.auth.getUser(privateTokenUser)
+      if (result.error) return { user: undefined, error: result.error }
+      const user = toUser(result.data.user)
+      return { user, error: undefined }
+    } catch (error) {
+      return { user: undefined, error }
+    }
+  }
+
+  async getProfileFonDb(id: string) {
+    try {
+      const { data, error } = await this.supabase
+        .from('profile')
+        .select('id, email, role')
+        .eq('id', id)
+        .limit(1)
+      if (error) return { profile: undefined, error }
+
+      const [{ email, role }] = data
+      const profile: Profile = { id, email, role }
+      return { profile, error: undefined }
+    } catch (error) {
+      return { profile: undefined, error }
+    }
+  }
+
+  async getProfile(privateTokenUser: string) {
+    const { user, error } = await this.getUser(privateTokenUser)
+
+    if (error || !user) return { profile: undefined, error }
+
+    const { id, email } = user
+
+    if (!id || !email)
+      return { profile: undefined, error: 'User does not exist' }
+
+    return this.getProfileFonDb(id)
+  }
 }

@@ -84,3 +84,7 @@ interface AppNavigationClickResult {
   url: URL
   method: string
 }
+
+export const getName = (email: string) => {
+  return email.split('@')[0]
+}

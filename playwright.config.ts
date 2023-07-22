@@ -1,7 +1,7 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
 import dotenv from 'dotenv'
-// dotenv.config()
+dotenv.config()
 dotenv.config({ path: '.env.local', override: true })
 const backendEnv = { ...process.env } as { [key: string]: string }
 
