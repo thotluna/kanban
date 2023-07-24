@@ -99,7 +99,7 @@ export default component$(() => {
           {user && (
             <>
               <Link href='/'>Home</Link>
-              <Link href='/dashboard'>Dasboard</Link>
+              <Link href='/dashboard'>Dashboard</Link>
               <button onClick$={handlerSignOut}>Sign Out</button>
             </>
           )}
