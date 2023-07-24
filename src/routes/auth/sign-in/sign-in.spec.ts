@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test'
 import { appNavigationClick } from '../../../shared/utils'
+import { TOTP } from 'otpauth'
 import dotenv from 'dotenv'
+import { signInTest } from './sign-in-function'
 dotenv.config()
 
 test.describe(`Testing Sing In route`, async () => {
@@ -115,22 +117,10 @@ test.describe(`Testing Sing In route`, async () => {
   })
 
   test('Should be sign in and sign out whit Github', async ({ page }) => {
-    const user = process.env.PRIVATE_USER
-    const pass = process.env.PRIVATE_PASSWORD
-    await page.goto('/')
-    await page.getByRole('link', { name: 'Sign In' }).click()
-    await page.getByRole('button', { name: 'Github' }).click()
-    await page.getByLabel('Username or email address').click()
-    await page.getByLabel('Username or email address').fill(`${user}`)
-    await page.getByLabel('Password').click()
-    await page.getByLabel('Password').fill(`${pass}`)
-    await page.getByRole('button', { name: 'Sign in' }).click()
-    page.getByRole('link', { name: 'Dasboard' })
-    page.getByRole('link', { name: 'Home' })
-    page.getByText('Dashboard')
-    page.getByRole('img')
-    // await page.getByRole('button', { name: 'Sign Out' }).click()
-    // await expect(page).toHaveURL('/auth/sign-in/')
+    await signInTest(page)
+    await page.getByText('Dashboard Client:').click()
+    await page.getByRole('button', { name: 'Sign Out' }).click()
+    await expect(page).toHaveURL('/auth/sign-in/')
   })
 
   test('Should be initial sign in with google', async ({ page }) => {
