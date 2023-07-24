@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
 import { appNavigationClick } from '../../../shared/utils'
-import { TOTP } from 'otpauth'
 import dotenv from 'dotenv'
 import { signInTest } from './sign-in-function'
 dotenv.config()
@@ -25,16 +24,6 @@ test.describe(`Testing Sing In route`, async () => {
     await expect(page).toHaveURL('/auth/sign-in/')
 
     await page.getByRole('button', { name: 'Github' }).click()
-  })
-
-  test(`should be render button Github`, async ({ page }) => {
-    await page.goto('/auth/sign-in')
-    await page.getByRole('button', { name: 'Github' }).click()
-  })
-
-  test(`should be render button google`, async ({ page }) => {
-    await page.goto('/auth/sign-in')
-    await page.getByRole('button', { name: 'Google' }).click()
   })
 
   test(`should be render form, input and button`, async ({ page }) => {

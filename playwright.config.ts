@@ -9,13 +9,13 @@ const config: PlaywrightTestConfig = {
   testDir: './',
   testMatch: '**/*.spec.ts',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: 2,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    actionTimeout: 0,
+    actionTimeout: 20000,
     trace: 'on-first-retry',
   },
   projects: [

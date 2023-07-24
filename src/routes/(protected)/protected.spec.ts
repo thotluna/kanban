@@ -16,12 +16,6 @@ test.describe(`Routes protected testing`, () => {
     await signInTest(page)
     await page.getByRole('link', { name: 'Dashboard' }).click()
     await expect(page).toHaveURL('/thotluna.test/')
-  })
-
-  test('should do not access the users dashboard', async ({ page }) => {
-    await page.goto('/')
-    await signInTest(page)
-    await expect(page).toHaveURL('/thotluna.test/')
     await page.goto('/thot')
     await expect(page).toHaveURL('/thotluna.test/')
   })

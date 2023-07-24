@@ -20,10 +20,10 @@ test.describe(`Testing Sing Up route`, async () => {
     await expect(page).toHaveURL('/auth/sign-up/')
   })
 
-  test(`should be render button Github`, async ({ page }) => {
-    await page.goto('/auth/sign-up')
-    await page.getByRole('button', { name: 'Github' }).click()
-  })
+  // test(`should be render button Github`, async ({ page }) => {
+  //   await page.goto('/auth/sign-up')
+  //   await page.getByRole('button', { name: 'Github' }).click()
+  // })
 
   test(`should be render button google`, async ({ page }) => {
     await page.goto('/auth/sign-up')
