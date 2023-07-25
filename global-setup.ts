@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 async function globalSetup() {
-  const browser: Browser = await chromium.launch({ headless: false })
+  const browser: Browser = await chromium.launch({ headless: true })
   const context = await browser.newContext()
   const page: Page = await context.newPage()
 
