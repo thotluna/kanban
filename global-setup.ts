@@ -28,23 +28,16 @@ async function globalSetup() {
   })
   const secretGenerated = totp.generate()
   await page.getByPlaceholder('XXXXXX').fill(`${secretGenerated}`)
-  const button = page.getByRole('button', { name: 'Verify' })
-  if ((await button.count()) > 0) {
-    console.log({ button })
-    button.click()
+  const btn = page.getByRole('button', { name: 'Verify' })
+  if ((await btn.count()) > 0) {
+    await btn.click()
   }
 
-  const urlString = page.url()
-  const url = new URL(urlString)
-  const stateUrl = url.searchParams.get('state')
-  if (
-    stateUrl ===
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjEyODcsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDE3My9hdXRoL3NpZ24taW4vIiwiZmxvd19zdGF0ZV9pZCI6IiJ9.NWGn9yiRYniqwG6AXIFmIw-8NG8k9csdqTz12QSQc_g'
-  ) {
-    await page.getByRole('button', { name: 'Authorize thotluna' }).click()
-  }
+  const verifyBtn = await page.getByText('Authorize thot-test')
 
-  // await new Promise((resolve) => setTimeout(resolve, 5000))
+  if ((await verifyBtn.count()) > 0) {
+    await verifyBtn.click()
+  }
 
   await page.getByText('Dashboard Client:').click()
 
