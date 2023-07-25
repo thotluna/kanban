@@ -8,15 +8,6 @@ export const signInTest = async (page: Page) => {
   const pass = process.env.PRIVATE_PASSWORD
   const secret = process.env.PRIVATE_2FA_SECRET
 
-  const totp = new TOTP({
-    issuer: 'GitHub',
-    label: `${user}`,
-    algorithm: 'SHA1',
-    digits: 6,
-    period: 30,
-    secret: `${secret}`,
-  })
-
   await page.goto('/auth/sign-in/')
   await page.getByRole('button', { name: 'Github' }).click()
   await page.getByLabel('Username or email address').click()
@@ -25,7 +16,15 @@ export const signInTest = async (page: Page) => {
   await page.getByLabel('Password').fill(`${pass}`)
   await page.getByRole('button', { name: 'Sign in' }).click()
   await page.getByPlaceholder('XXXXXX').click()
-
+  await new Promise((resolve) => setTimeout(resolve, 10000))
+  const totp = new TOTP({
+    issuer: 'GitHub',
+    label: `${user}`,
+    algorithm: 'SHA1',
+    digits: 6,
+    period: 30,
+    secret: `${secret}`,
+  })
   const secretGenerated = totp.generate()
   await page.getByPlaceholder('XXXXXX').fill(`${secretGenerated}`)
   const urlString = page.url()

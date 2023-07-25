@@ -1,29 +1,29 @@
 import { test, expect } from '@playwright/test'
 import { appNavigationClick } from '../../../shared/utils'
 
+test.use({ storageState: './NoAuth.json' })
 test.describe(`Testing Sing Up route`, async () => {
   test('Should be render the header Sign Up form', async ({ page }) => {
+    if (page.url().startsWith('/thot-test/')) {
+      await page.getByRole('button', { name: 'Sign Out' }).click()
+    }
     await page.goto('/')
     await page.getByRole('link', { name: 'Sign Up' }).click()
     await expect(page).toHaveURL('/auth/sign-up/')
     await expect(page).toHaveTitle('Sign Up')
 
-    await page.locator('header').getByRole('img').click()
+    const logo = page.locator('header').getByTitle('logo')
+    expect(logo).toBeVisible()
     await page.getByRole('heading', { name: 'Sign Up' }).click()
 
     const message = page.getByText('Or sign in with user exist')
     expect(message).toHaveCount(1)
 
-    await page.getByText('Or sign in with user exist').click()
+    await message.click()
     await expect(page).toHaveURL('/auth/sign-in/')
     await page.goBack()
     await expect(page).toHaveURL('/auth/sign-up/')
   })
-
-  // test(`should be render button Github`, async ({ page }) => {
-  //   await page.goto('/auth/sign-up')
-  //   await page.getByRole('button', { name: 'Github' }).click()
-  // })
 
   test(`should be render button google`, async ({ page }) => {
     await page.goto('/auth/sign-up')

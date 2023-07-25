@@ -21,6 +21,6 @@
       "~/*": ["./src/*"]
     }
   },
-  "files": ["./.eslintrc.cjs"],
+  "files": ["./.eslintrc.cjs", "global-setup.ts"],
   "include": ["src", "./*.d.ts", "./*.config.ts", "tests/sign-in.spec.ts"]
 }

@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test'
 import { appNavigationClick } from '../../../shared/utils'
 import dotenv from 'dotenv'
-import { signInTest } from './sign-in-function'
 dotenv.config()
 
+test.use({ storageState: './NoAuth.json' })
 test.describe(`Testing Sing In route`, async () => {
   test('Should be render the header Sign In form', async ({ page }) => {
     await page.goto('about:blank')
@@ -12,7 +12,8 @@ test.describe(`Testing Sing In route`, async () => {
     await expect(page).toHaveURL('/auth/sign-in/')
     await expect(page).toHaveTitle('Sign In')
 
-    await page.locator('header').getByRole('img').click()
+    const logo = page.locator('header').getByTitle('logo')
+    expect(logo).toBeVisible()
     await page.getByRole('heading', { name: 'Sign In' }).click()
 
     const message = page.getByText('Or sign in with your email')
@@ -105,8 +106,10 @@ test.describe(`Testing Sing In route`, async () => {
     await expect(notError).not.toBeVisible()
   })
 
+  test.use({ storageState: './LoginAuth.json' })
   test('Should be sign in and sign out whit Github', async ({ page }) => {
-    await signInTest(page)
+    await page.goto('/')
+    await page.getByRole('link', { name: 'Dashboard' }).click()
     await page.getByText('Dashboard Client:').click()
     await page.getByRole('button', { name: 'Sign Out' }).click()
     await expect(page).toHaveURL('/auth/sign-in/')

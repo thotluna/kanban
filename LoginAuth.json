@@ -1,0 +1,174 @@
+{
+  "cookies": [
+    {
+      "name": "_octo",
+      "value": "GH1.1.2040041231.1690318171",
+      "domain": ".github.com",
+      "path": "/",
+      "expires": 1721940569.096056,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_device_id",
+      "value": "1cb67017667b6ab8eebc0b3e37c6ed74",
+      "domain": "github.com",
+      "path": "/",
+      "expires": 1721940570.548942,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "has_recent_activity",
+      "value": "1",
+      "domain": "github.com",
+      "path": "/",
+      "expires": 1690321772.003257,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "preferred_color_mode",
+      "value": "light",
+      "domain": ".github.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "tz",
+      "value": "America%2FCaracas",
+      "domain": ".github.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "user_session",
+      "value": "vJ3o7BQSwHgT5fti5lwTHzgdeskDJdXCivngtuv3rGwChgut",
+      "domain": "github.com",
+      "path": "/",
+      "expires": 1691527770.623804,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-user_session_same_site",
+      "value": "vJ3o7BQSwHgT5fti5lwTHzgdeskDJdXCivngtuv3rGwChgut",
+      "domain": "github.com",
+      "path": "/",
+      "expires": 1691527770.623868,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "color_mode",
+      "value": "%7B%22color_mode%22%3A%22auto%22%2C%22light_theme%22%3A%7B%22name%22%3A%22light%22%2C%22color_mode%22%3A%22light%22%7D%2C%22dark_theme%22%3A%7B%22name%22%3A%22dark%22%2C%22color_mode%22%3A%22dark%22%7D%7D",
+      "domain": ".github.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "logged_in",
+      "value": "yes",
+      "domain": ".github.com",
+      "path": "/",
+      "expires": 1721940571.62392,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "dotcom_user",
+      "value": "thot-test",
+      "domain": ".github.com",
+      "path": "/",
+      "expires": 1721940571.62394,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gh_sess",
+      "value": "xBQiygtn7O%2F%2Fu9SRkhjKw01Bps7AQbMFRNEQBIoXLMgmB10nTd4oMziojTMKbT10NP9IcEbTlQcp2VFnO8208PmKG9jU8Hmp%2F7ldNLkdDAdbjHCGdYZpV7JYLTtJLBGjZeYbHyXgx%2BMTSQr6%2BjwRlHgM%2B5kkLSGYeCU8jazm5Q%2Br5ZFqlsFBTGFKj%2Fa3rIsUa2t4qkPg7nVWDNnRdllOuQGbpiUylem6jqJt3UzxpWgk7ommncyb69dd3XLy%2BYneo7joWCYQ2KEVrOC4GufIfgilqAHpkY3Tcn1gYm2Dp%2Bm6Y%2BrFy%2Bz497mDTFf0maQ7HCyRXgpyS0OHRxWI6%2BKi5BAcaVCSqpTslQAbGqpCb7pwTFWNFIQMK0S9IhZgEie9dYAwY4RINDV8DVnLUG%2FLxFaOHVQudbGw%2B87uh7rGYWotGapuVimhePZ%2B3p3t2uIzU9wtirjhwLJGEs8f3VMZeFSRgICT16jg4M8LIxV5Fjm3wESfW826BO80FtMJBQ9B3jB0RYUcxPkhIEni2TC1Ctead6SJMftkV%2B4qDAu0eR%2BbCnHd4xiiVw95ML%2BdNK%2FCY7D4uUc2QfqeoHUhGAyCVILxBgog3WP1b7kGH296rPkdhWlKN1QFdNy7t9h1S5Cfb2QYyXn1ZaNTS4a3CyxsdvIc%2FMTJYh6IOIqtHTemEoRxI0vStSAsVC14v%2FCL7HgmuzMuCeDnfWEILdV6LcGp8wkI1vZdm1jSM0evLOrd0yRKndGiuWR7ol8qIt7%2B6Tj8of1C3fG%2FkHIaP3tZhpNiQ4Wpk2nVl9l5s%2Fjgx0jaRnkB5wUl9Kwn2b4yz7hTuWHxTrpywFHikzSzBC7j64mpntzPrcUtozhy2htElOMaQIhxxhu4trDZYWdi4DpBcm7B4W6y6eoHCPNL--pKrS3NBGpKhd45PX--ZTrdjf46ZoiWw%2ByVDDvpsA%3D%3D",
+      "domain": "github.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sb-access-token",
+      "value": "eyJhbGciOiJIUzI1NiIsImtpZCI6InJaZjcwYjBKdmQ0M0lsNWIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNjkwMzIxNzc1LCJpYXQiOjE2OTAzMTgxNzUsImlzcyI6Imh0dHBzOi8vaHR0cHM6Ly9tdXBibmx3cmpmdmtmeHRsamNxcy5zdXBhYmFzZS5jby9hdXRoL3YxIiwic3ViIjoiNTFmNGE0OTktODhjMi00N2ZmLWFlZDEtY2JmNjg1YWRjNmI2IiwiZW1haWwiOiJ0aG90bHVuYS50ZXN0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZ2l0aHViIiwicHJvdmlkZXJzIjpbImdpdGh1YiJdfSwidXNlcl9tZXRhZGF0YSI6eyJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzE0MDM0NDMwOT92PTQiLCJlbWFpbCI6InRob3RsdW5hLnRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0aG90LXRlc3QiLCJwcm92aWRlcl9pZCI6IjE0MDM0NDMwOSIsInN1YiI6IjE0MDM0NDMwOSIsInVzZXJfbmFtZSI6InRob3QtdGVzdCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNjkwMzE4MTc1fV0sInNlc3Npb25faWQiOiI3ZjQwMDdiYS05OGUyLTRmOWItOWJmMi0yNzU1OTdlMmUwYTMifQ.R-Qd5NJv5jTUtawN7vZPu2I_dJGWu2b7A3TIvSvauk0",
+      "domain": "mupbnlwrjfvkfxtljcqs.supabase.co",
+      "path": "/",
+      "expires": 1690404573.64052,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sb-refresh-token",
+      "value": "Tgw3PKYyynOzaWNS9O8y_w",
+      "domain": "mupbnlwrjfvkfxtljcqs.supabase.co",
+      "path": "/",
+      "expires": 1690404573.640562,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "server-refresh-token",
+      "value": "Tgw3PKYyynOzaWNS9O8y_w",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1690354174.826336,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "server-access-token",
+      "value": "eyJhbGciOiJIUzI1NiIsImtpZCI6InJaZjcwYjBKdmQ0M0lsNWIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNjkwMzIxNzc1LCJpYXQiOjE2OTAzMTgxNzUsImlzcyI6Imh0dHBzOi8vaHR0cHM6Ly9tdXBibmx3cmpmdmtmeHRsamNxcy5zdXBhYmFzZS5jby9hdXRoL3YxIiwic3ViIjoiNTFmNGE0OTktODhjMi00N2ZmLWFlZDEtY2JmNjg1YWRjNmI2IiwiZW1haWwiOiJ0aG90bHVuYS50ZXN0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZ2l0aHViIiwicHJvdmlkZXJzIjpbImdpdGh1YiJdfSwidXNlcl9tZXRhZGF0YSI6eyJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzE0MDM0NDMwOT92PTQiLCJlbWFpbCI6InRob3RsdW5hLnRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0aG90LXRlc3QiLCJwcm92aWRlcl9pZCI6IjE0MDM0NDMwOSIsInN1YiI6IjE0MDM0NDMwOSIsInVzZXJfbmFtZSI6InRob3QtdGVzdCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNjkwMzE4MTc1fV0sInNlc3Npb25faWQiOiI3ZjQwMDdiYS05OGUyLTRmOWItOWJmMi0yNzU1OTdlMmUwYTMifQ.R-Qd5NJv5jTUtawN7vZPu2I_dJGWu2b7A3TIvSvauk0",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1690404574.826446,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:5173",
+      "localStorage": [
+        {
+          "name": "sb-mupbnlwrjfvkfxtljcqs-auth-token",
+          "value": "{\"provider_token\":\"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\",\"provider_refresh_token\":null,\"access_token\":\"eyJhbGciOiJIUzI1NiIsImtpZCI6InJaZjcwYjBKdmQ0M0lsNWIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNjkwMzIxNzc1LCJpYXQiOjE2OTAzMTgxNzUsImlzcyI6Imh0dHBzOi8vaHR0cHM6Ly9tdXBibmx3cmpmdmtmeHRsamNxcy5zdXBhYmFzZS5jby9hdXRoL3YxIiwic3ViIjoiNTFmNGE0OTktODhjMi00N2ZmLWFlZDEtY2JmNjg1YWRjNmI2IiwiZW1haWwiOiJ0aG90bHVuYS50ZXN0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZ2l0aHViIiwicHJvdmlkZXJzIjpbImdpdGh1YiJdfSwidXNlcl9tZXRhZGF0YSI6eyJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzE0MDM0NDMwOT92PTQiLCJlbWFpbCI6InRob3RsdW5hLnRlc3RAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0aG90LXRlc3QiLCJwcm92aWRlcl9pZCI6IjE0MDM0NDMwOSIsInN1YiI6IjE0MDM0NDMwOSIsInVzZXJfbmFtZSI6InRob3QtdGVzdCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNjkwMzE4MTc1fV0sInNlc3Npb25faWQiOiI3ZjQwMDdiYS05OGUyLTRmOWItOWJmMi0yNzU1OTdlMmUwYTMifQ.R-Qd5NJv5jTUtawN7vZPu2I_dJGWu2b7A3TIvSvauk0\",\"expires_in\":3600,\"expires_at\":1690321774,\"refresh_token\":\"Tgw3PKYyynOzaWNS9O8y_w\",\"token_type\":\"bearer\",\"user\":{\"id\":\"51f4a499-88c2-47ff-aed1-cbf685adc6b6\",\"aud\":\"authenticated\",\"role\":\"authenticated\",\"email\":\"thotluna.test@gmail.com\",\"email_confirmed_at\":\"2023-07-24T00:46:14.449191Z\",\"phone\":\"\",\"confirmed_at\":\"2023-07-24T00:46:14.449191Z\",\"last_sign_in_at\":\"2023-07-25T20:49:35.989939Z\",\"app_metadata\":{\"provider\":\"github\",\"providers\":[\"github\"]},\"user_metadata\":{\"avatar_url\":\"https://avatars.githubusercontent.com/u/140344309?v=4\",\"email\":\"thotluna.test@gmail.com\",\"email_verified\":true,\"iss\":\"https://api.github.com\",\"preferred_username\":\"thot-test\",\"provider_id\":\"140344309\",\"sub\":\"140344309\",\"user_name\":\"thot-test\"},\"identities\":[{\"id\":\"140344309\",\"user_id\":\"51f4a499-88c2-47ff-aed1-cbf685adc6b6\",\"identity_data\":{\"avatar_url\":\"https://avatars.githubusercontent.com/u/140344309?v=4\",\"email\":\"thotluna.test@gmail.com\",\"email_verified\":true,\"iss\":\"https://api.github.com\",\"preferred_username\":\"thot-test\",\"provider_id\":\"140344309\",\"sub\":\"140344309\",\"user_name\":\"thot-test\"},\"provider\":\"github\",\"last_sign_in_at\":\"2023-07-24T00:46:14.442669Z\",\"created_at\":\"2023-07-24T00:46:14.442718Z\",\"updated_at\":\"2023-07-25T20:49:35.986976Z\"}],\"created_at\":\"2023-07-24T00:46:14.43851Z\",\"updated_at\":\"2023-07-25T20:49:35.991532Z\"}}"
+        }
+      ]
+    },
+    {
+      "origin": "https://github.com",
+      "localStorage": [
+        {
+          "name": "bundle-urls",
+          "value": "{\"wp-runtime.js\":\"https://github.githubassets.com/assets/wp-runtime-5f5c88e71f4f.js\",\"vendors-node_modules_dompurify_dist_purify_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_dompurify_dist_purify_js-64d590970fa6.js\",\"vendors-node_modules_stacktrace-parser_dist_stack-trace-parser_esm_js-node_modules_github_bro-a4c183.js\":\"https://github.githubassets.com/assets/vendors-node_modules_stacktrace-parser_dist_stack-trace-parser_esm_js-node_modules_github_bro-a4c183-ae93d3fba59c.js\",\"ui_packages_soft-nav_soft-nav_ts.js\":\"https://github.githubassets.com/assets/ui_packages_soft-nav_soft-nav_ts-db8b037dfa8f.js\",\"environment.js\":\"https://github.githubassets.com/assets/environment-c2140938ffde.js\",\"vendors-node_modules_github_selector-observer_dist_index_esm_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_selector-observer_dist_index_esm_js-2646a2c533e3.js\",\"vendors-node_modules_primer_behaviors_dist_esm_focus-zone_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_focus-zone_js-d55308df5023.js\",\"vendors-node_modules_github_relative-time-element_dist_index_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_relative-time-element_dist_index_js-99e288659d4f.js\",\"vendors-node_modules_fzy_js_index_js-node_modules_github_markdown-toolbar-element_dist_index_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_fzy_js_index_js-node_modules_github_markdown-toolbar-element_dist_index_js-d2119e75298d.js\",\"vendors-node_modules_delegated-events_dist_index_js-node_modules_github_auto-complete-element-5b3870.js\":\"https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_auto-complete-element-5b3870-9b38c0812424.js\",\"vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-8873b7.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-8873b7-5771678648e0.js\",\"vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_github_text-ex-3415a8.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_github_text-ex-3415a8-7ecc10fb88d0.js\",\"vendors-node_modules_primer_view-components_app_components_primer_primer_js-node_modules_gith-e7a1e2.js\":\"https://github.githubassets.com/assets/vendors-node_modules_primer_view-components_app_components_primer_primer_js-node_modules_gith-e7a1e2-0c753046063c.js\",\"github-elements.js\":\"https://github.githubassets.com/assets/github-elements-82e8d1a2fb81.js\",\"element-registry.js\":\"https://github.githubassets.com/assets/element-registry-1a082dad72a6.js\",\"vendors-node_modules_lit-html_lit-html_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_lit-html_lit-html_js-9d9fe1859ce5.js\",\"vendors-node_modules_github_hydro-analytics-client_dist_analytics-client_js-node_modules_gith-f3aee1.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_hydro-analytics-client_dist_analytics-client_js-node_modules_gith-f3aee1-fd3c22610e40.js\",\"vendors-node_modules_morphdom_dist_morphdom-esm_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_morphdom_dist_morphdom-esm_js-b1fdd7158cf0.js\",\"vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_github_alive-client_dist-bf5aa2.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_github_alive-client_dist-bf5aa2-424aa982deef.js\",\"vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-1f4793023fcd.js\",\"vendors-node_modules_github_remote-form_dist_index_js-node_modules_scroll-anchoring_dist_scro-52dc4b.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_scroll-anchoring_dist_scro-52dc4b-e1e33bfc0b7e.js\",\"vendors-node_modules_color-convert_index_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_color-convert_index_js-35b3ae68c408.js\",\"vendors-node_modules_github_paste-markdown_dist_index_esm_js-node_modules_github_quote-select-7a8e2b.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_paste-markdown_dist_index_esm_js-node_modules_github_quote-select-7a8e2b-f036384374ea.js\",\"ui_packages_alive_alive_ts.js\":\"https://github.githubassets.com/assets/ui_packages_alive_alive_ts-e336ff3cd9ef.js\",\"app_assets_modules_github_updatable-content_ts-ui_packages_hydro-analytics_hydro-analytics_ts.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_updatable-content_ts-ui_packages_hydro-analytics_hydro-analytics_ts-0c1db02caf86.js\",\"app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_onfocus_ts-app_ass-079b43.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_onfocus_ts-app_ass-079b43-c46fa3ecf26e.js\",\"app_assets_modules_github_sticky-scroll-into-view_ts.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_sticky-scroll-into-view_ts-050ad6637d58.js\",\"app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-2e2258.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-2e2258-b84eab1b8924.js\",\"app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-f22ac6b94445.js\",\"app_assets_modules_github_blob-anchor_ts-app_assets_modules_github_filter-sort_ts-app_assets_-c96432.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_blob-anchor_ts-app_assets_modules_github_filter-sort_ts-app_assets_-c96432-3460172f1b1f.js\",\"behaviors.js\":\"https://github.githubassets.com/assets/behaviors-3f72af8c54b8.js\",\"vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-06ff531.js\":\"https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-06ff531-fe0b8ccc90a5.js\",\"notifications-global.js\":\"https://github.githubassets.com/assets/notifications-global-f57687007bfc.js\",\"vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_delegated-events_di-94a48b.js\":\"https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_delegated-events_di-94a48b-f9e5146929c3.js\",\"vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_index_js.js\":\"https://github.githubassets.com/assets/vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_index_js-677582870bfd.js\",\"vendors-node_modules_github_remote-form_dist_index_js-node_modules_github_catalyst_lib_index_-7a61950.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_github_catalyst_lib_index_-7a61950-6b568b5ed6ad.js\",\"vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_mini-throt-40d40d.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_mini-throt-40d40d-6e72ee4b2241.js\",\"app_assets_modules_github_filter-input_ts.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_filter-input_ts-e5d99d30ff21.js\",\"app_assets_modules_github_ref-selector_ts.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_ref-selector_ts-0e2b12902d39.js\",\"app_assets_modules_github_fetch_ts-app_assets_modules_github_profile_edit-social-account_ts.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_fetch_ts-app_assets_modules_github_profile_edit-social-account_ts-911cc0c7ae05.js\",\"app_assets_modules_github_details-dialog_ts-app_assets_modules_github_settings_actions-policy-b25f2c.js\":\"https://github.githubassets.com/assets/app_assets_modules_github_details-dialog_ts-app_assets_modules_github_settings_actions-policy-b25f2c-8f77d34917fb.js\",\"settings.js\":\"https://github.githubassets.com/assets/settings-cb5c1e8d9d00.js\",\"vendors-node_modules_github_remote-form_dist_index_js-node_modules_github_memoize_dist_esm_in-687f35.js\":\"https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_github_memoize_dist_esm_in-687f35-d131f0b6de8e.js\",\"sessions.js\":\"https://github.githubassets.com/assets/sessions-2638decb9ee5.js\",\"light.css\":\"https://github.githubassets.com/assets/light-8cafbcbd78f4.css\",\"dark.css\":\"https://github.githubassets.com/assets/dark-31dc14e38457.css\",\"primer-primitives.css\":\"https://github.githubassets.com/assets/primer-primitives-fb1d51d1ef66.css\",\"primer.css\":\"https://github.githubassets.com/assets/primer-05fec56eb582.css\",\"global.css\":\"https://github.githubassets.com/assets/global-96fc04180b0b.css\",\"github.css\":\"https://github.githubassets.com/assets/github-5303b0225264.css\",\"oauth.js\":\"https://github.githubassets.com/assets/oauth-a468be445b64.js\"}"
+        }
+      ]
+    }
+  ]
+}

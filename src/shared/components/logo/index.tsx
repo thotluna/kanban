@@ -1,6 +1,7 @@
 export const Logo = ({ size = 24 }) => {
   return (
     <svg
+      title='logo'
       width={size}
       height={size}
       viewBox='0 0 121 121'

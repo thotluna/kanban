@@ -6,17 +6,20 @@ dotenv.config({ path: '.env.local', override: true })
 const backendEnv = { ...process.env } as { [key: string]: string }
 
 const config: PlaywrightTestConfig = {
+  globalSetup: './global-setup',
   testDir: './',
   testMatch: '**/*.spec.ts',
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  // fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 2,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
+    baseURL: 'http://localhost:5173',
     actionTimeout: 20000,
     trace: 'on-first-retry',
+    storageState: './LoginAuth.json',
   },
   projects: [
     {
